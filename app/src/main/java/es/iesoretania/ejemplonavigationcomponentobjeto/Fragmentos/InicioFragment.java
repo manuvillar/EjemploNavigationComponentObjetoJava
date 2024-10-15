@@ -23,7 +23,7 @@ public class InicioFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentInicioBinding.inflate(inflater, container, false);
@@ -42,7 +42,7 @@ public class InicioFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String texto = "";
-                Integer numero = 0;
+                int numero = 0;
                 if (binding.EditTextTexto.getText().toString().isEmpty() ||
                         binding.EditTextNumero.getText().toString().isEmpty()){
                     Toast.makeText(getContext(), "Debes introducir algún valor en todos los campos", Toast.LENGTH_SHORT).show();
